@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A+ Tuition Centre - Excellence in Education</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .subject-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        .gallery-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="home" class="bg-white shadow-md sticky top-0 z-40">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="#home" class="flex items-center text-xl font-bold text-gray-800">
+                <img src="https://googleusercontent.com/file_content/2" alt="A+ Tuition Centre Logo" class="h-16 mr-2">
+                <span class="hidden sm:inline">A+ Tuition Centre</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+                <a href="#subjects" class="text-gray-600 hover:text-indigo-600">Subjects</a>
+                <a href="#gallery" class="text-gray-600 hover:text-indigo-600">Gallery</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+                <a href="https://wa.me/27677979198" target="_blank" class="text-green-600 hover:text-green-800">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200">About Us</a>
+            <a href="#subjects" class="block py-2 px-4 text-sm hover:bg-gray-200">Subjects</a>
+            <a href="#gallery" class="block py-2 px-4 text-sm hover:bg-gray-200">Gallery</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+            <a href="https://wa.me/27677979198" target="_blank" class="block py-2 px-4 text-sm hover:bg-gray-200">WhatsApp</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero-section" class="hero-section text-white">
+            <div class="container mx-auto px-6 py-32 text-center" style="background-color: rgba(17, 24, 39, 0.8); border-radius: 0.5rem;">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Unlock Your Full Academic Potential</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Expert tutoring in a wide range of subjects to help you achieve academic excellence and build a strong foundation for your future.</p>
+                <a href="#subjects" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg cta-button">Explore Our Subjects</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About A+ Tuition Centre</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Your partners in learning and achievement.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://googleusercontent.com/file_content/3" alt="Founder, Anthony Darko" class="rounded-lg shadow-lg mx-auto" style="max-width: 350px;">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
+                        <p class="text-gray-600 mb-4">
+                            At A+ Tuition Centre, our mission is to provide high-quality, personalized education that empowers students to excel. We are dedicated to fostering a supportive and engaging learning environment where students can build confidence, master challenging subjects, and develop critical thinking skills.
+                        </p>
+                        <p class="text-gray-600">
+                            We believe that every student has the potential to succeed, and our experienced tutors are committed to unlocking that potential through tailored instruction and mentorship.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Subjects Offered Section -->
+        <section id="subjects" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Subjects We Offer</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Expert guidance across a diverse range of subjects. Click on a subject to learn more.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center subject-card" data-modal-target="accounting-modal">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-calculator fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Accounting</h3>
+                        <p class="text-gray-600">Grades 10-12</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center subject-card" data-modal-target="management-modal">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-chart-line fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Economics & Management Sciences</h3>
+                        <p class="text-gray-600">Grades 7-9</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center subject-card" data-modal-target="natural-sci-modal">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-flask fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Natural Sciences</h3>
+                        <p class="text-gray-600">Grades 7-9</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center subject-card" data-modal-target="maths-modal">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-infinity fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Mathematics</h3>
+                        <p class="text-gray-600">Grades 4-12</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center subject-card" data-modal-target="math-lit-modal">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-book-open fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Mathematical Literacy</h3>
+                        <p class="text-gray-600">Grades 10-12</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center subject-card" data-modal-target="egd-modal">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-drafting-compass fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Eng. Graphics & Design (EGD)</h3>
+                        <p class="text-gray-600">Grades 10-12</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center subject-card" data-modal-target="cat-modal">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-laptop-code fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Computer App. Tech. (CAT)</h3>
+                        <p class="text-gray-600">Grades 10-12</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Students in Action</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">See our dedicated learners hard at work in a focused learning environment.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <img src="https://googleusercontent.com/file_content/4" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                    <img src="https://googleusercontent.com/file_content/5" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                    <img src="https://googleusercontent.com/file_content/6" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                    <img src="https://googleusercontent.com/file_content/7" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                    <img src="https://googleusercontent.com/file_content/8" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                    <img src="https://googleusercontent.com/file_content/9" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                    <img src="https://googleusercontent.com/file_content/10" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                    <img src="https://googleusercontent.com/file_content/11" alt="Students studying at A+ Tuition Centre" class="w-full h-full object-cover rounded-lg shadow-md gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get in Touch</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">We're here to help. Contact us to start your journey to success.</p>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row gap-12">
+                        <!-- Contact Info -->
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Details</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 bg-indigo-500 text-white rounded-full h-12 w-12 flex items-center justify-center"><i class="fas fa-phone fa-lg"></i></div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold">Phone</h4>
+                                        <a href="tel:0677979198" class="text-indigo-600 hover:underline">067 797 9198</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 bg-indigo-500 text-white rounded-full h-12 w-12 flex items-center justify-center"><i class="fas fa-envelope fa-lg"></i></div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold">Email</h4>
+                                        <a href="mailto:distinctiontutors7@gmail.com" class="text-indigo-600 hover:underline">distinctiontutors7@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 bg-green-500 text-white rounded-full h-12 w-12 flex items-center justify-center"><i class="fab fa-whatsapp fa-lg"></i></div>
+                                    <div class="ml-4">
+                                        <h4 class="text-lg font-semibold">WhatsApp</h4>
+                                        <a href="https://wa.me/27677979198" target="_blank" class="text-indigo-600 hover:underline">Message Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact Form -->
+                        <div class="md:w-1/2">
+                             <h3 class="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+                             <form action="#" method="POST" onsubmit="alert('Thank you for your message! This is a demo form.'); return false;">
+                                 <div class="mb-4">
+                                     <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                     <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                                 </div>
+                                 <div class="mb-4">
+                                     <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                                     <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                                 </div>
+                                 <div class="mb-4">
+                                     <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                     <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                                 </div>
+                                 <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg cta-button">Send Message</button>
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2024 A+ Tuition Centre. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="https://wa.me/27677979198" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals Container -->
+    <div id="modal-container">
+        <!-- Accounting Modal -->
+        <div id="accounting-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full relative">
+                <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Accounting</h3>
+                <p class="text-gray-600 mb-4">Delve into the language of business. Accounting focuses on recording, summarizing, and analyzing financial transactions. You'll learn about financial statements, budgeting, and how to make informed business decisions. Its history is rooted in ancient civilizations, evolving into the cornerstone of modern commerce.</p>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold">Tutor:</h4>
+                    <p class="text-gray-700">Anthony Darko</p>
+                </div>
+            </div>
+        </div>
+        <!-- Economics and Management Sciences Modal -->
+        <div id="management-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full relative">
+                <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Economics & Management Sciences (EMS)</h3>
+                <p class="text-gray-600 mb-4">Build a strong foundation for future business leaders. EMS introduces the exciting worlds of the economy, entrepreneurship, and financial literacy. This subject covers how societies manage resources and lays the groundwork for senior phase subjects like Accounting and Economics.</p>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold">Tutor:</h4>
+                    <p class="text-gray-700">Anthony Darko</p>
+                </div>
+            </div>
+        </div>
+        <!-- Natural Sciences Modal -->
+        <div id="natural-sci-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full relative">
+                <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Natural Sciences</h3>
+                <p class="text-gray-600 mb-4">Uncover the principles that govern the natural world. This subject is the gateway to Physics, Chemistry, and Life Sciences. You'll conduct experiments, learn about matter, energy, and living systems, fostering a spirit of inquiry and discovery.</p>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold">Tutor:</h4>
+                    <p class="text-gray-700">Anthony Darko</p>
+                </div>
+            </div>
+        </div>
+        <!-- Mathematics Modal -->
+        <div id="maths-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full relative">
+                <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Mathematics</h3>
+                <p class="text-gray-600 mb-4">Master the universal language of problem-solving. From basic arithmetic to advanced calculus, Mathematics develops logical reasoning and abstract thinking. It is the essential tool for science, technology, engineering, and finance.</p>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold">Tutor:</h4>
+                    <p class="text-gray-700">Anthony Darko</p>
+                </div>
+            </div>
+        </div>
+        <!-- Mathematical Literacy Modal -->
+        <div id="math-lit-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full relative">
+                <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Mathematical Literacy</h3>
+                <p class="text-gray-600 mb-4">Apply mathematical concepts to everyday life. Mathematical Literacy focuses on practical skills needed for managing personal finances, interpreting data in the media, and making sense of the world around you. It’s math for the real world.</p>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold">Tutor:</h4>
+                    <p class="text-gray-700">Anthony Darko</p>
+                </div>
+            </div>
+        </div>
+        <!-- EGD Modal -->
+        <div id="egd-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full relative">
+                <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Engineering Graphics & Design (EGD)</h3>
+                <p class="text-gray-600 mb-4">Bring ideas to life through technical drawing. Engineering Graphics and Design (EGD) is the art of visual communication for technical fields. Learn freehand, instrument, and computer-aided drawing (CAD) to design the products and buildings of the future.</p>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold">Tutor:</h4>
+                    <p class="text-gray-700">Mr. Ramson (E.G.D Educator at South City College)</p>
+                </div>
+            </div>
+        </div>
+        <!-- CAT Modal -->
+        <div id="cat-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full relative">
+                <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Computer Application Technology (CAT)</h3>
+                <p class="text-gray-600 mb-4">Become proficient in the technology that drives the modern world. Computer Application Technology (CAT) provides essential, practical skills in using office software (Word, Excel, Access), managing files, and understanding how computers work to solve problems.</p>
+                <div class="border-t pt-4 mt-4">
+                    <h4 class="font-semibold">Tutor:</h4>
+                    <p class="text-gray-700">Information coming soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Hero Section Slideshow ---
+            const heroSection = document.getElementById('hero-section');
+            const studentImages = [
+                'https://googleusercontent.com/file_content/4',
+                'https://googleusercontent.com/file_content/5',
+                'https://googleusercontent.com/file_content/6',
+                'https://googleusercontent.com/file_content/7',
+                'https://googleusercontent.com/file_content/8',
+                'https://googleusercontent.com/file_content/9',
+                'https://googleusercontent.com/file_content/10',
+                'https://googleusercontent.com/file_content/11'
+            ];
+            let currentImageIndex = 0;
+
+            const changeHeroImage = () => {
+                heroSection.style.backgroundImage = `url('${studentImages[currentImageIndex]}')`;
+                currentImageIndex = (currentImageIndex + 1) % studentImages.length;
+            };
+            
+            // Set initial image and start slideshow
+            changeHeroImage(); 
+            setInterval(changeHeroImage, 5000); // Change image every 5 seconds
+
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+            for (let link of mobileMenuLinks) {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+
+            // --- Modal Handling ---
+            const subjectCards = document.querySelectorAll('[data-modal-target]');
+            const modals = document.querySelectorAll('.modal');
+            const closeButtons = document.querySelectorAll('.modal-close');
+
+            const openModal = (modalId) => {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.remove('hidden');
+                }
+            };
+
+            const closeModal = (modal) => {
+                if (modal) {
+                    modal.classList.add('hidden');
+                }
+            };
+
+            subjectCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const modalId = card.getAttribute('data-modal-target');
+                    openModal(modalId);
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    closeModal(button.closest('.modal'));
+                });
+            });
+
+            modals.forEach(modal => {
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        closeModal(modal);
+                    }
+                });
+            });
+
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    modals.forEach(modal => {
+                        if (!modal.classList.contains('hidden')) {
+                            closeModal(modal);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
